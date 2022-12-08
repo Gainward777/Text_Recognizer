@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Text_Recognizer.MainPage" 
+             BackgroundColor="LightSlateGray" Padding="3">
+
+    <StackLayout>
+        <Frame Background="Transparent" Padding="0"  
+               CornerRadius="20" 
+               HorizontalOptions="FillAndExpand" 
+               VerticalOptions="FillAndExpand" 
+               HasShadow="True" BorderColor="SlateGray" >
+            
+            <Grid>
+                <ImageButton x:Name="ImagB" Aspect="AspectFit" 
+                             Margin="1" CornerRadius="20" 
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand" 
+                             BackgroundColor="Black" Clicked="OnImagBClick" >
+                    <!--Opacity="0.5" for transparency-->
+
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.98" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+
+                </ImageButton>
+
+                <Button Text="Recognize" Font="MV Boli" 
+                        BackgroundColor="#2196F2" 
+                        CornerRadius="50"
+                        WidthRequest="100" HorizontalOptions="Center" 
+                        VerticalOptions="End" Margin="0, 0 ,0, 30" 
+                        Clicked="OnRecognizeButtonClick" 
+                        BorderColor="#2196F4" 
+                        BorderWidth="1">
+
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.9" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+
+                </Button>
+
+                <Frame BackgroundColor="Silver" BorderColor="Gray"
+                       Padding="0" CornerRadius="15" 
+                       Margin="50, 0 , 0, 40" 
+                       VerticalOptions="End" HorizontalOptions="Start">
+                    
+                    <Switch  OnColor="Orange" VerticalOptions="End" 
+                        HorizontalOptions="Start"
+                        ThumbColor="Green" 
+                        Toggled="OnToggled" />
+                    
+                </Frame>
+
+                <Button   BackgroundColor="Coral" CornerRadius="40"
+                          WidthRequest="40" HeightRequest="40" 
+                          HorizontalOptions="End" 
+                          VerticalOptions="End" Margin="0, 0 ,50, 32" 
+                          Clicked="OnRecButtonClick" 
+                          BorderColor="Salmon" 
+                          BorderWidth="5">
+                    
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale"
+                            Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+
+
+            </Grid>          
+
+
+        </Frame>
+        
+    </StackLayout>
+
+</ContentPage>
